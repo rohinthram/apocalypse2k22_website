@@ -1,0 +1,209 @@
+{%extends "layout.html"%}
+
+{%block head%}
+    <script src="{{url_for('static', filename='form_submit.js')}}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles_login.css') }}">
+    <style>
+        .parent {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 2fr 1fr;
+            grid-column-gap: 20px;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            text-align: center;
+            font-size: large;
+            letter-spacing: 1.5px;
+        }
+
+        .div1 { grid-area: 1 / 1 / 2 / 3; }
+
+        .modal-content {
+            background-color: #1c7ed6;
+        }
+
+        .for_nam{
+            border: none;
+            border-bottom: white solid 2px;
+            background-color: transparent;
+            color: white;
+        }
+
+        .for_nam:focus{
+            outline: none;
+        }
+
+
+        .for_nam:focus::placeholder{
+            color: white;
+        }
+        .btn {    
+            background-color: #1c7ed6;
+            color: inherit;
+            border: 1px solid white;
+        }
+
+        @media only screen and (max-width: 1000px){
+            .parent {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 2fr 1.5f 1fr 1fr;
+                grid-column-gap: 0;
+            }
+            .div1 { grid-area: 1 ; }
+            .event-img {
+                height: 150px;
+            }
+            .btn-reg {
+                margin-top: 30px;
+            }
+        }
+
+        .imp-info {
+            animation: zoominoutsinglefeatured 1.5s infinite
+        }
+
+        @keyframes zoominoutsinglefeatured {
+            0% {
+                transform: scale(1,1);
+            }
+            50% {
+                transform: scale(1.2,1.2);
+            }
+            100% {
+                transform: scale(1,1);
+            }
+        }
+        
+    </style>
+{%endblock head%}
+
+{%block body%}
+    
+    <div class="container">
+        <div class="parent">
+            <div class="div1">
+                <h1>{{event.title}}</h1>
+            </div>
+            <div>
+                {{event.description | safe}}
+                <br><br>
+                {%if event.category in ['tech', 'non_tech', 'title_event'] %}
+                    Maximum Team Size : {{event.maxTeamSize}}
+                {%endif%}
+                <br><br>
+                {%for i in event.rounds %}
+                    {{i.name}} @ <b>{{i.time}}</b> <br>
+                    Mode : {{i.mode}} <br><br>
+                {%endfor%}
+
+                <div class="imp-info">
+                    {% if event.category in ['tech', 'non_tech', 'title_event']%}
+                        Cash Prizes !!! <br><br>
+                    {%endif%}
+                    Certificates for all participants
+                </div>
+
+            </div>
+            <div class="div2"> <img src="{{url_for('static', filename=event.thumbnail)}}" class="event-img" width="70%" height="250px"></div>
+            <div>
+                {%if event.category in ['tech', 'non_tech', 'title_event'] %}
+                    For further details : <br/><br/>
+                    {%for i in event.contact%}
+                        <b>{{i.name}}</b> <i class="fa fa-phone mr-1"></i> {{i.mobile}}<br/>
+                    {%endfor%}
+                {%else%}
+                    Speakers : <br/><br/>
+                    {%for i in event.contact%}
+                        <b>{{i.name}}</b><br/>
+                    {%endfor%}
+                {%endif%}
+            </div>
+            <div>
+                {%if current_user.is_authenticated %}
+                    {% if id not in current_user.events.split(',') %}
+                        <button type="button" class="btn btn-info btn-lg" data-bs-toggle="modal" data-bs-target="#register-modal">Register</button>
+                    {%else%}
+                        <button type="button" class="btn btn-info btn-lg success">Registered!</button>
+                    {%endif%}
+
+                {%else%}
+                    <button type="button" class="btn btn-info btn-lg btn-reg">
+                        <a href="{{url_for('login')}}" style="color: inherit;text-decoration: none;">Login to Register</a>
+                    </button>
+                {%endif%}
+            </div>
+            
+        </div>
+    </div>   
+    
+    
+    <!-- Modals -->
+    <div class="modal fade" id="register-modal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content col-md-offset-2 col-md-8">
+                <div class="modal-header">
+                    <span class="fa fa-file-text">  {{event.title}}</span>
+                    <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <!-- <button id="rowAdder" type="button"
+                            class="btn btn-dark">
+                            <span class="bi bi-plus-square-dotted">
+                            </span> ADD
+                        </button> -->
+                    <div>
+                        Enter Registration number of all team members
+                        <br>
+                        Team Members :
+                    </div>
+                        
+                    <form id="modal-form" action="" class="form">
+                        <div class="formGroup">
+                            <input class="for_nam" type="text" id="reg1" value="{{current_user.reg_no}}" disabled/>
+                        </div>
+                        {% for i in range(event.maxTeamSize-1)%}
+                        <div class="formGroup">
+                            <div id="row"> <div class="input-group m-3">
+                            <div class="input-group-prepend">
+                            <button class="btn btn-danger btn-sm" id="DeleteRow" type="button">
+                            <i class="bi bi-trash"></i> &times;</button> </div>
+                            <input class="for_nam" type="text" id="reg{{i+2}}" class="form-control m-input" value="Reg No"> </div> </div>
+                        </div>
+                        {% endfor%}
+                        <input type="submit" class="btn" value="Register"/>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                        {%if event.category in ['tech', 'non_tech', 'title_event'] %}
+                            Max Team Size : <div id="teamSize">{{event.maxTeamSize}}</div><br>
+                            {%if event.maxTeamSize > 1%}
+                                * Click the &times; to register with less than {{event.maxTeamSize}} participants
+                            {%endif%}
+                        {%endif%}
+                        <div id="event-id" style="display: none;">{{id}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="alert-modal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content col-md-offset-2 col-md-8">
+                <div class="modal-header">
+                    <span class="fa fa-envelope">  Alert</span>
+                    <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div id="msg"></div>
+                </div>
+                <div class="modal-footer">
+                    Apocalypse 2k22
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{%endblock body%}

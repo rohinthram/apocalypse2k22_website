@@ -1,0 +1,29 @@
+{%extends "layout.html"%}
+
+{%block body%}
+    <div class="container" style="height: 100vh;">
+        <div>
+            Hello, {{current_user.name}} ({{current_user.reg_no}}) @ {{current_user.email}}
+        </div>
+        
+        <div style="font-size: x-large;">
+        Your Registered Events <br>
+
+            <ul>
+                {% for i in current_user.events.split(',') %}
+                    {%if i %}
+                        <li><a style="text-decoration: none;color:inherit;" href="{{url_for('event_details', id=i)}}">{{events_dict[i]['title']}}</a></li>
+                    {%endif%}
+                {%endfor%}
+            </ul>
+        </div>
+
+        *Click on the events check if there's any update <br><br>
+
+        *Check out other events from <a style="text-decoration: none;color:inherit;" href="{{url_for('events')}}">-->Here</a> <br><br>
+
+        {%if 'title_event' not in current_user.events.split(',')%}
+            <a style="text-decoration: none;color:inherit;" href="{{url_for('event_details', id='title_event')}}">Don't forget :::: Mr. & Ms. Electrocrat :::: click here to register</a>
+        {%endif%}
+    </div>
+{%endblock body%}

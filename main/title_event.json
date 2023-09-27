@@ -1,0 +1,51 @@
+{
+    "title_event": {
+        "title" : "Mr. & Ms. Electrocrat",
+        "thumbnail" : "images/title_event_flex.png",
+        "description" : "Being termed students,Toppers, Engineers we always hid behind titles. Here's your chance to shine alone and ablaze.Join us for the grand title event of Apocalypse Mr and Ms Electrocrat and earn exciting prizes! It's fun, it's Invigorating and most importantly its non-technical.Stay tuned for the surprise events and get an amazing chance to explore yourselves along the journey. Do register",
+        "contact": [
+            {
+                "name":"",
+                "mobile":""
+            },
+            {
+                "name":"",
+                "mobile":""
+            }
+        ],
+        "maxTeamSize": 1,
+        "category":"title_event",
+        "rounds": [
+            {
+                "name":"Round 1",
+                "mode":"Physical",
+                "time":"Friday(1pm-6pm)",
+                "venue": ""
+            },
+            {
+                "name":"Round 2",
+                "mode":"Physical",
+                "time":"Saturday(1pm-6pm)",
+                "venue": ""
+            },
+            {
+                "name":"Round 3",
+                "mode":"Physical",
+                "time":"Saturday(1pm-6pm)",
+                "venue": ""
+            },
+            {
+                "name":"Round 4",
+                "mode":"Physical",
+                "time":"Sunday(9:30am-12pm)",
+                "venue": ""
+            },
+            {
+                "name":"Round 5",
+                "mode":"Physical",
+                "time":"Sunday(9:30am-12pm)",
+                "venue": ""
+            }
+        ]
+    }
+}

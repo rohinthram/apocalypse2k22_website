@@ -1,0 +1,55 @@
+{%extends "layout.html"%}
+
+{%block head%}
+    <script>
+        $(document).ready(function() {
+    $('#refresh').on('click', function(event){
+        $.ajax({
+            data:{
+                "request":"refresh",
+                "event_id":$('#event-name').val()
+            },
+            type: 'POST',
+            url: '/refresh'
+        })
+        .done(function(data){
+            $('#registrations').html(data.html);
+            $('#time').html('Data as of ' + data.time)
+        });
+    });
+});
+    </script>
+{%endblock head%}
+
+{%block body%}
+    <button class="btn btn-success" id="refresh">Fetch & Filter</button>
+    <button class="btn btn-success" id="print" onclick="window.print();">Print Page</button>
+    <select name="event-name" id="event-name">
+        <option value="all">All</option>
+        <option value="t1">Code Combat</option>
+        <option value="t2">Race on Lap-Four</option>
+        <option value="t3">Projee's Assemble</option>
+        <option value="t4">Elano</option>
+        <option value="t5">Clash on Flip Flop</option>
+        <option value="t6">Discode</option>
+        <option value="t7">Wi-com</option>
+        <option value="t8">µ-Tant</option>
+        <option value="t9">Your Forum</option>
+        
+        <option value="nt1">Math Mavericks</option>
+        <option value="nt2">Impromptu '90</option>
+        <option value="nt3">Case Study</option>
+        <option value="nt4">Connexions</option>
+        <option value="nt5">Treasure Hunt</option>
+        <option value="nt6">Carnival Games</option>
+        <option value="nt7">IPL Auction</option>
+
+        <option value="title_event">Mr. & Ms. Electrocrat</option>
+
+        <option value="w1">AI Workshop</option>
+    </select>
+    
+    <div id="time"></div>
+    <div id="registrations"></div>    
+{%endblock body%}
+

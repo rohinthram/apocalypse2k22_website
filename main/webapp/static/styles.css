@@ -1,0 +1,66 @@
+
+body {
+    background-color: white;
+    background-image: url('/static/images/bg.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'Patrick Hand', cursive;
+    font-size: large;
+}
+
+footer {
+    background-color: #14c5bb;
+    border-radius: 30px;
+    color: white;
+    padding-top: 40px;
+    padding-left: 40px;
+}
+
+.flash-message{
+    position: fixed;
+    margin-left: 70%;
+    margin-top: 2%;
+    animation: fadeinout 2s linear 1 forwards;
+    z-index: 20;
+}
+
+.container {
+    padding: 50px;
+}
+
+.card {
+    background-color: black;
+    border-radius: 10px;
+    width: 12rem;
+}
+
+.col {
+    padding: 20px;
+}
+
+.col :hover {
+    transform: scale(1.03);
+    transition: transform 0.5s;
+}
+
+.title-event :hover{
+    transform: scale(1.03);
+    transition: transform 0.5s;
+}
+
+@media only screen and (min-width: 1000px){
+    .card {
+        width: 18rem;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .card {
+        width: 80vw;
+    }
+    .container {
+        margin: 0;
+    }
+}
+

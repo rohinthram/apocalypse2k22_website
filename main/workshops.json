@@ -1,0 +1,22 @@
+{
+    "w1": {
+        "title" : "Fundamentals and Breadth of AI and Its Trendy Appilcation",
+        "thumbnail" : "images/workshops/ai.jpeg",
+        "description" : "Artificial intelligence (AI) is the ability of a computer or a robot controlled by a computer to do tasks that are usually done by humans because they require human intelligence and discernment. To develop a knowledge in this field that too through a wonderful workshop that helps us in deciding out future career.",
+        "contact": [
+            {
+                "name":""
+            }
+        ],
+        "maxTeamSize": 1,
+        "category":"workshop",
+        "rounds": [
+            {
+                "name":"",
+                "mode":"Physical",
+                "time":"Saturday(1:30PM-4:00PM)",
+                "venue": ""
+            }
+        ]
+    }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        {% if title %}
+            {{title}} | Apocalypse
+        {% else %}
+            Apocalypse
+        {% endif %}
+    </title>
+    <!-- add icon link -->
+    <link rel="icon" href="{{ url_for('static', filename='logo.jpg')}}" type="image/x-icon">
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--For https://ionic.io/ionicons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- For google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <!--Custom CSS Files-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles_forms.css') }}">
+    <!--Custom JS Files-->
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+
+    {%block head%}
+    {%endblock head%}
+
+</head>
+
+<body>
+
+    <div class="flash-message">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                <div class="alert alert-{{category}} alert-dismissible">
+                    <button type="button" class="close" data-bs-dismiss="alert">&times;</button>
+                    {{ message }}
+                </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+    
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{url_for('home')}}">
+                <img src="{{url_for('static', filename='images/logo.png')}}" class="rounded-pill" style="width: 40px;"> Apocalypse
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="{{'active' if active_page == 'events' }} nav-link" href="{{ url_for('events') }}">Events</a>
+                    </li>
+                    {% if current_user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="{{'active' if active_page == 'dashboard' }} nav-link" href="{{ url_for('dashboard') }}">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="{{'active' if active_page == 'logout' }} nav-link" href="{{ url_for('logout') }}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="{{'active' if active_page == 'signup' }} nav-link" href="{{ url_for('signup') }}">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="{{'active' if active_page == 'login' }} nav-link" href="{{ url_for('login') }}">Login</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    
+    
+    
+    {%block body%}
+    {%endblock body%}
+
+
+    
+    <footer class="site-footer">
+        <div>
+            <div class="row">
+                <div class="ml-auto col-sm-4 col-sm-5">
+                    <p><b>Chairpersons</b></p>
+                    <p>Chairperson #1 <i class="fa fa-phone mr-1"></i> number</p>
+                    <p>Chairperson #2 <i class="fa fa-phone mr-1"></i> number</p>
+                </div>
+                <div class="mx-auto col-sm-4 col-sm-5">
+                    <img src="{{url_for('static', filename='images/eea_logo.png')}}" class="img-fluid" width="300px" height="200px">
+                    <p>
+                        <i class="fa fa-envelope"></i> Mail us <br>
+                        @ <a href="mailto:apocalypse2k22@gmail.com" style="text-decoration: none;color:inherit;">apocalypse2k22@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <p class="copyright-text text-center mt-2">&copy; Apocalypse 2k22 <br>
+                Developed with <i class="fa fa-heart"></i>  by Rohinth Ram R V</p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

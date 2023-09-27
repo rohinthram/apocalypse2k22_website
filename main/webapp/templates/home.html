@@ -1,0 +1,183 @@
+{%extends "layout.html"%}
+
+{%block head%}
+    <style>
+        .parent-events {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            text-align: center;
+            align-content: center;
+            
+        }
+        #bgVideo {
+            width: 100vw;
+        }
+
+        #aboutVideo {
+            border-radius: 50px;
+        }
+
+        .parent-about {
+            padding: 50px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: 1fr;
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+        }
+        .tt {
+            width: 80vw;
+        }
+
+        .title-event-img-div {
+            display: grid; align-items:center;justify-content:center;
+        }
+        .title-event-img {
+                width: 80vw;
+            }
+
+        @media only screen and (max-width: 1000px){
+            .parent-about {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 2fr;
+            }
+            
+            #aboutVideo {
+                border-radius: 50px;
+                width: 80vw;
+            }
+
+        }
+        .imp-info {
+            animation: zoominoutsinglefeatured 1.5s infinite;
+            text-align: center;
+        }
+        @keyframes zoominoutsinglefeatured {
+            0% {
+                transform: scale(1,1);
+            }
+            50% {
+                transform: scale(1.2,1.2);
+            }
+            100% {
+                transform: scale(1,1);
+            }
+        }
+        
+    </style>
+{%endblock head%}
+
+{%block body%}
+    <div class="section">
+        <video autoplay muted loop id="bgVideo">
+            <source src="{{url_for('static', filename='images/bg.mp4')}}" type="video/mp4">
+        </video>
+        
+    </div>
+    <div class="section imp-info">
+            <i class="fa fa-money"></i> Results Declared !!!
+    </div>
+    <div class="section">
+        <div class="parent-about">
+            <div>
+                <video autoplay muted loop id="aboutVideo">
+                    <source src="{{url_for('static', filename='images/about_us.mp4')}}" type="video/mp4">
+                </video>
+            </div>
+            <div>
+                <h1>Apocalypse</h1>
+                <div>
+                    <b>Apocalypse</b> is an intra-college technical symposium conducted 
+                    every year by the Electronics Engineers Association for the students
+                    of various departments of MIT. As the name indicates, Apocalypse brings
+                     out the skills and talents of the students. This time, 
+                     Apocalypse '22 is bundled with exciting new events.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="header"></div>
+        <div style="text-align: center;">
+            <h1>Events</h1>
+        </div>
+        <div class="header"></div>
+        <div class="container">
+            <div class="parent-events">
+                <div class="row">
+                    {%for event in event_types%}
+                        <div class="col">
+                            <div class="card">
+                                <a href="{{url_for(event_types[event].url)}}" style="color:inherit; text-decoration:none;">
+                                <img src="{{ url_for('static', filename=event_types[event].thumbnail) }}" class="card-img-top">
+                                
+                                    <div class="card-body">
+                                        {{event_types[event].title}}            
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    {%endfor%}
+                </div>
+            </div>
+        </div>
+
+        <div class="section title-event">
+            <div class="header"></div>
+                <div style="text-align: center;">
+                    <h1>Title Event</h1>
+                </div>
+                <a href="{{url_for('event_details', id='title_event')}}" style="color: inherit;text-decoration:none;">
+                    <div style="text-align: center;" class="imp-info">
+                        <!-- <h1>Click here to Register !!!</h1> -->
+                        <h1> Check out Mr. and Ms. Electrocrat !!!</h1>
+                    </div>
+                    <div class="title-event-img-div">
+                        <img class="title-event-img" src="{{url_for('static', filename='images/title_event_flex.png')}}"/>
+                    </div>
+                </a>
+        </div>
+
+        <div class="section">
+            <div class="container">
+                <div style="text-align: center;padding-bottom: 20px;">
+                    <h1>@ Day 1 (25 Nov 2022)</h1>
+                </div>
+                <div style="display: grid; align-items:center;justify-content:center;">
+                    <img class="tt" src="{{url_for('static', filename='images/tt1.jpeg')}}" width="1000px"/>
+                </div>
+
+                <div style="text-align: center;padding-bottom: 20px;">
+                    <h1>@ Day 2 (26 Nov 2022)</h1>
+                </div>
+                <div style="display: grid; align-items:center;justify-content:center;">
+                    <img class="tt" src="{{url_for('static', filename='images/tt2.jpeg')}}" width="1000px"/>
+                </div>
+                <div style="text-align: center;padding-bottom: 20px;">
+                    <h1>@ Day 3 (27 Nov 2022)</h1>
+                    <h2>Final Rounds</h2>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section">
+            <div class="container home-flex" style="display:grid; align-self:center;justify-content:center;">
+                <img class="tt" src="{{url_for('static', filename='images/flex.png')}}" width="1000px">
+            </div>
+        </div>
+        
+    </div>
+    <hr>
+    
+
+{%endblock body%}
+

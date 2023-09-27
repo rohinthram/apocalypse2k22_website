@@ -1,0 +1,295 @@
+{
+    "t1": {
+        "title" : "CODE COMBAT",
+        "thumbnail" : "images/tech_events/code_combat.jpg",
+        "description" : "Hey coders,\n\t\t\t\t\"Make it work, Make it right, Make it fast\" To celebrate the sprit of programming Apocalypse brings \"CODE COMBAT CONTEST\" a knockout coding contest in which each of the participants will get a chance to fight and win to survive in the competition. No competition is completed without rewards, make a chance to win prizes.",
+        "contact": [
+            {
+                "name":"",
+                "mobile":""
+            },
+            {
+                "name":"",
+                "mobile":""
+            },
+            {
+                "name":"",
+                "mobile":""
+            }
+        ],
+        "maxTeamSize": 3,
+        "category":"tech",
+        "topic":"Programming",
+        "rounds": [
+            {
+                "name":"Round 1",
+                "mode":"Physical",
+                "time":"Friday(1:30pm to 5:30pm)",
+                "venue": ""
+            },
+            {
+                "name":"Round 2",
+                "mode":"Physical",
+                "time":"Sunday(9:30am to 12pm)",
+                "venue": ""
+            }
+        ]
+    },
+    "t2": {
+        "title" : "RACE ON LAP-FOUR",
+        "thumbnail" : "images/tech_events/ss.jpg",
+        "description" : "Want to know how strong you are with Signals and Systems? This event is all about it. Questions will be from your syllabus.<br><br>1st Round->MCQ's<br>2nd ROUND->Interviews",
+        "contact": [
+            {
+                "name":"",
+                "mobile":""
+            },
+            {
+                "name":"",
+                "mobile":""
+            }
+        ],
+        "maxTeamSize": 3,
+        "category":"tech",
+        "topic":"Signals & Systems",
+        "rounds": [
+            {
+                "name":"Round 1",
+                "mode":"Physical",
+                "time":"Friday(1:30pm to 5:30pm)",
+                "venue": ""
+            },
+            {
+                "name":"Round 2",
+                "mode":"Physical",
+                "time":"Sunday(9:30am to 12pm)",
+                "venue": ""
+            }
+        ]
+    },
+    "t3": {
+        "title" : "PROJEE'S ASSEMBLE",
+        "thumbnail" : "images/tech_events/project.jpg",
+        "description" : "\"Opportunity is missed by most people because it is dressed in overalls and looks like work\". If you are excited to present your works done in your areas of interest, this one is for you. Come participate and get exciting prizes.",
+        "contact": [
+            {
+                "name":"",
+                "mobile":""
+            },
+            {
+                "name":"",
+                "mobile":""
+            }
+        ],
+        "maxTeamSize": 3,
+        "category":"tech",
+        "topic":"Project Display",
+        "rounds": [
+            {
+                "name":"Round 1",
+                "mode":"Physical",
+                "time":"Saturday(1:30pm-5:30pm)",
+                "venue": ""
+            },
+            {
+                "name":"Round 2",
+                "mode":"Physical",
+                "time":"TBD",
+                "venue": ""
+            }
+        ]
+    },
+    "t4": {
+        "title" : "ELANO",
+        "thumbnail" : "images/tech_events/elano.jpg",
+        "description" : "Elano tests your knowledge on the basic concepts of Circuit theory and electronic circuits which will help you in designing any basic circuits.<br><br>1st Round->MCQ's<br>2nd ROUND->Interviews",
+        "contact": [
+            {
+                "name":"",
+                "mobile":""
+            },
+            {
+                "name":"",
+                "mobile":""
+            }
+        ],
+        "maxTeamSize": 3,
+        "category":"tech",
+        "topic":"Circuit Theory",
+        "rounds": [
+            {
+                "name":"Round 1",
+                "mode":"Physical",
+                "time":"Saturday(1:30pm to 5:30pm)",
+                "venue": ""
+            },
+            {
+                "name":"Round 2",
+                "mode":"Physical",
+                "time":"Sunday(9:30am to 12pm)",
+                "venue": ""
+            }
+        ]
+    },
+    "t5": {
+        "title" : "CLASH OF FLIP FLOP",
+        "thumbnail" : "images/tech_events/ff.jpg",
+        "description" : " Clash of Flops is based on the concepts of Digital electronic circuits and basic Networking circuits. The questions will be limited within the syllabus.<br><br>1st Round->MCQ's<br>2nd ROUND->Interviews",
+        "contact": [
+            {
+                "name":"",
+                "mobile":""
+            },
+            {
+                "name":"",
+                "mobile":""
+            }
+        ],
+        "maxTeamSize": 3,
+        "category":"tech",
+        "topic":"Digital Electronics",
+        "rounds": [
+            {
+                "name":"Round 1",
+                "mode":"Physical",
+                "time":"Friday(1:30pm to 5:30pm)",
+                "venue": ""
+            },
+            {
+                "name":"Round 2",
+                "mode":"Physical",
+                "time":"Sunday(9:30am to 12pm)",
+                "venue": ""
+            }
+        ]
+    },
+    "t6": {
+        "title" : "DISCODE",
+        "thumbnail" : "images/tech_events/discode.jpg",
+        "description" : " \"Your real competition is your Distraction\"<br><br>Come get yourself into the highly distracting problem solving space filled with Music ,noise and brainy people.",
+        "contact": [
+            {
+                "name":"",
+                "mobile":""
+            },
+            {
+                "name":"",
+                "mobile":""
+            }
+        ],
+        "maxTeamSize": 1,
+        "category":"tech",
+        "topic":"Programming",
+        "rounds": [
+            {
+                "name":"Round 1",
+                "mode":"Physical",
+                "time":"Friday(1:30pm to 5:30pm)",
+                "venue": ""
+            },
+            {
+                "name":"Round 2",
+                "mode":"Physical",
+                "time":"Saturday(1:30pm to 5:30pm)",
+                "venue": ""
+            },
+            {
+                "name":"Round 3",
+                "mode":"Physical",
+                "time":"Sunday(9:30am to 12pm)",
+                "venue": ""
+            }
+        ]
+    },
+    "t7": {
+        "title" : "WI-COM",
+        "thumbnail" : "images/tech_events/wicom.jpg",
+        "description" : "Wi-com tests your knowledge on the basic concepts of Communication theory and digital communication. Come participate and get exciting prizes.<br><br>1st Round->MCQ's<br>2nd ROUND->Interviews",
+        "contact": [
+            {
+                "name":"",
+                "mobile":""
+            },
+            {
+                "name":"",
+                "mobile":""
+            }
+        ],
+        "maxTeamSize": 3,
+        "category":"tech",
+        "topic":"Communication",
+        "rounds": [
+            {
+                "name":"Round 1",
+                "mode":"Physical",
+                "time":"Saturday(1:30pm to 5:30pm)",
+                "venue": ""
+            },
+            {
+                "name":"Round 2",
+                "mode":"Physical",
+                "time":"Sunday(9:30am to 12pm)",
+                "venue": ""
+            }
+        ]
+    },
+    "t8": {
+        "title" : "µ-TANT",
+        "thumbnail" : "images/tech_events/utant.jpg",
+        "description" : "µ-Tant mainly focusses on Microprocessor and Microcontrollers programming.It tests the conceptual understanding of students and their programming and analyzing skills.It consists of 2 Rounds wherein the first round is MCQ based assessing followed by Interviews in the second Round.",
+        "contact": [
+            {
+                "name":"",
+                "mobile":""
+            },
+            {
+                "name":"",
+                "mobile":""
+            }
+        ],
+        "maxTeamSize": 3,
+        "category":"tech",
+        "topic":"Microprocessors",
+        "rounds": [
+            {
+                "name":"Round 1",
+                "mode":"Physical",
+                "time":"Friday(1:30pm to 5:30pm)",
+                "venue": ""
+            },
+            {
+                "name":"Round 2",
+                "mode":"Physical",
+                "time":"Sunday(9:30am to 12pm)",
+                "venue": ""
+            }
+        ]
+    },
+    "t9": {
+        "title" : "YOUR FORUM",
+        "thumbnail" : "images/tech_events/gd.jpg",
+        "description" : "Get prepared to face the challenges with your dynamic personality and tremendous confidence! EEA proudly presents 'Your Forum' which includes 2 rounds. Let their constructive criticism help shape your confidence. Pre final and second years of all departments do attend and get benefitted. Gear up with your CV!",
+        "contact": [
+            {
+                "name":"",
+                "mobile":""
+            },
+            {
+                "name":"",
+                "mobile":""
+            }
+        ],
+        "maxTeamSize": 3,
+        "category":"tech",
+        "topic":"Group Discussion",
+        "rounds": [
+            {
+                "name":"Round 1",
+                "mode":"Physical",
+                "time":"Saturday(2:30pm-5:30pm)",
+                "venue": ""
+            }
+        ]
+    }
+
+}

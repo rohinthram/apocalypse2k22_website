@@ -1,0 +1,225 @@
+{
+    "nt1": {
+        "title" : "MATH MAVERICKS",
+        "thumbnail" : "images/non_tech_events/math.jpg",
+        "description" : "Only way to learn mathematics , is to do mathematics.Mathematics gives us hope that every problem has a solution",
+        "contact": [
+            {
+                "name":"",
+                "mobile":""
+            },
+            {
+                "name":"",
+                "mobile":""
+            }
+        ],
+        "maxTeamSize": 3,
+        "category":"non_tech",
+        "rounds": [
+            {
+                "name":"Round 1",
+                "mode":"Physical",
+                "time":"Friday(2:30PM-5:30PM)",
+                "venue": ""
+            },
+            {
+                "name":"Round 2",
+                "mode":"Physical",
+                "time":"Sunday(9:30AM-12PM)",
+                "venue": ""
+            }
+        ]
+    },
+    "nt2": {
+        "title" : "IMPROMPTU '90",
+        "thumbnail" : "images/non_tech_events/impromptu.jpg",
+        "description" : "Impromptu speaking skills is the most recommended skill which every student should possess. <br><br>A topic will be given on spot and the student will be asked to deliver an Impromptu speech for 90 seconds with relevant content and proper structure.",
+        "contact": [
+            {
+                "name":"",
+                "mobile":""
+            },
+            {
+                "name":"",
+                "mobile":""
+            }
+        ],
+        "maxTeamSize": 1,
+        "category":"non_tech",
+        "rounds": [
+            {
+                "name":"Round 1",
+                "mode":"Physical",
+                "time":"Friday(2:30PM-5:30PM)",
+                "venue": ""
+            },
+            {
+                "name":"Round 2",
+                "mode":"Physical",
+                "time":"Sunday(9:30AM-12PM)",
+                "venue": ""
+            }
+        ]
+    },
+    "nt3": {
+        "title" : "CASE STUDY",
+        "thumbnail" : "images/non_tech_events/case_study.png",
+        "description" : "It is a fun event which will test your data interpretation and business problem solving skills.<br>Due to their dynamic and challenging nature, case competitions are well worth considering. It is an amazing way to put your technical skills to the test and your classroom knowledge into practice.<br>Guys who prefer to work outside IT and Core and anyone with logical thought process",
+        "contact": [
+            {
+                "name":"",
+                "mobile":""
+            },
+            {
+                "name":"",
+                "mobile":""
+            }
+        ],
+        "maxTeamSize": 3,
+        "category":"non_tech",
+        "rounds": [
+            {
+                "name":"Round 1",
+                "mode":"Physical",
+                "time":"Saturday(2:30PM-5:30PM)",
+                "venue": ""
+            },
+            {
+                "name":"Round 2",
+                "mode":"Physical",
+                "time":"Sunday (9:30AM-12:00PM)",
+                "venue": ""
+            }
+        ]
+    },
+    "nt4": {
+        "title" : "CONNEXIONS",
+        "thumbnail" : "images/non_tech_events/connexions.jpg",
+        "description" : "Hey Folks!!!<br><br>This is like a puzzle when interconnected into a piece to unveil a solution that is hidden under the pieces & it's all about connecting the pictures to find the answer out of it.",
+        "contact": [
+            {
+                "name":"",
+                "mobile":""
+            },
+            {
+                "name":"",
+                "mobile":""
+            }
+        ],
+        "maxTeamSize": 3,
+        "category":"non_tech",
+        "rounds": [
+            {
+                "name":"Round 1",
+                "mode":"Physical",
+                "time":"Friday(2:30PM-5:30PM)",
+                "venue": ""
+            },
+            {
+                "name":"Round 2",
+                "mode":"Physical",
+                "time":"Sunday(9:30AM-12PM)",
+                "venue": ""
+            }
+        ]
+    },
+    "nt5": {
+        "title" : "TREASURE HUNT",
+        "thumbnail" : "images/non_tech_events/treasure_hunt.jpg",
+        "description" : "The idea of hunting for hidden treasures has always been exciting and adventurous! We bring you an opportunity to awaken your inner Holmes. Join us in the Adventure!!",
+        "contact": [
+            {
+                "name":"",
+                "mobile":""
+            },
+            {
+                "name":"",
+                "mobile":""
+            }
+        ],
+        "maxTeamSize": 3,
+        "category":"non_tech",
+        "rounds": [
+            {
+                "name":"Round 1",
+                "mode":"Physical",
+                "time":"Saturday(2:30PM-5:30PM)",
+                "venue": ""
+            }
+        ]
+    },
+    "nt6": {
+        "title" : "CARNIVAL GAMES",
+        "thumbnail" : "images/non_tech_events/carnival_games.jpg",
+        "description" : "TECH HURDLE<br>Crossword puzzle that makes us think about the maze .<br><br>HEADS UP<br>Find what your friend acts to keep your heads up in the race<br><br>BLOCK $ TACLE<br>Have a double mindset that answers in a fraction of second.<br><br>DECODE BBROY<br>Decode as many resistors in the given time by their colour coding.",
+        "contact": [
+            {
+                "name":"",
+                "mobile":""
+            },
+            {
+                "name":"",
+                "mobile":""
+            }
+        ],
+        "maxTeamSize": 3,
+        "category":"non_tech",
+        "rounds": [
+            {
+                "name":"Round 1",
+                "mode":"Physical",
+                "time":"Saturday(2:30PM-5:30PM)",
+                "venue": ""
+            },
+            {
+                "name":"Round 2",
+                "mode":"Physical",
+                "time":"Saturday(2:30PM-5:30PM)",
+                "venue": ""
+            },
+            {
+                "name":"Round 3",
+                "mode":"Physical",
+                "time":"Saturday(2:30PM-5:30PM)",
+                "venue": ""
+            },
+            {
+                "name":"Round 4",
+                "mode":"Physical",
+                "time":"Saturday(2:30PM-5:30PM)",
+                "venue": ""
+            }
+        ]
+    },
+    "nt7": {
+        "title" : "IPL AUCTION",
+        "thumbnail" : "images/non_tech_events/ipl_auction.jpeg",
+        "description" : "Love to bid? Join our auction party<br>The ultimate bidding strategy<br>Catch the action at the Auction!!!",
+        "contact": [
+            {
+                "name":"",
+                "mobile":""
+            },
+            {
+                "name":"",
+                "mobile":""
+            }
+        ],
+        "maxTeamSize": 3,
+        "category":"non_tech",
+        "rounds": [
+            {
+                "name":"Round 1",
+                "mode":"Physical",
+                "time":"Saturday(2:30PM-5:30PM)",
+                "venue": ""
+            },
+            {
+                "name":"Round 2",
+                "mode":"Physical",
+                "time":"Sunday(9:30AM-1PM)",
+                "venue": ""
+            }
+        ]
+    }
+}

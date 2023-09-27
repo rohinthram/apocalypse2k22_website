@@ -1,0 +1,17 @@
+{
+    "e1": {
+        "title" : "Technical Events",
+        "thumbnail" : "images/tech_thumbnail.jpg",
+        "url" : "tech_events"
+    },
+    "e2": {
+        "title" : "Non Technical Events",
+        "thumbnail" : "images/non_tech_thumbnail.jpeg",
+        "url" : "non_tech_events"
+    },
+    "e3": {
+        "title" : "Workshops",
+        "thumbnail" : "images/workshops/ai.jpeg",
+        "url" : "workshops"
+    }
+}
