@@ -18,8 +18,6 @@ Note: Please do not alter the json structure, it may the code to not function as
 
 This code requires a valid token for Gmail API to function, or else it may cause failure of the mailing service 
 
-
-    **Please feel free to mention me in case you feel to do so!!!**
-- You can add a statement to site this github repo(https://github.com/rohinthram/apocalyse2k22_website) or the linked account(https://www.linkedin.com/in/rohinthram/) as an inspiration, **if it was**.!!
+**In case this helps, please free feel to cite this repo!!!**
 
 Happy Coding !
